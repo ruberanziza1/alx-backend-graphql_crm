@@ -1,3 +1,5 @@
+
+Import Query and Mutation from crm.schema
 import graphene
 
 class Query(graphene.ObjectType):
@@ -74,3 +76,4 @@ schema = graphene.Schema(query=Query, mutation=Mutation)
        }
      }
    }
+
