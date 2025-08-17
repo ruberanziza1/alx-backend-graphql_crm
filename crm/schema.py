@@ -10,6 +10,8 @@ from django.utils import timezone
 from .filters import CustomerFilter, ProductFilter, OrderFilter
 from graphene_django.filter import DjangoFilterConnectionField
 
+from .mutations import CreateCustomer, BulkCreateCustomers, CreateProduct, CreateOrder
+
 class CustomerType(DjangoObjectType):
     class Meta:
         model = Customer
@@ -243,4 +245,7 @@ class Mutation(graphene.ObjectType):
     bulkCreateCustomers = BulkCreateCustomers.Field()
     createProduct = CreateProduct.Field()
     createOrder = CreateOrder.Field()
+
+
+
 
